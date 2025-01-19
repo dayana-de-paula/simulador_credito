@@ -1,14 +1,14 @@
-#Simulador de Empréstimos
+# Simulador de Empréstimos 🏦
 
 Uma API desenvolvida com FastAPI para simular empréstimos e utilizar IA para fornecer explicações e responder perguntas sobre empréstimos.
 
-##Funcionalidades
+## 🚀 Funcionalidades
 
-- Simular valores de empréstimos com base no valor, taxa de juros e número de parcelas.
-- Gerar resumos explicativos sobre empréstimos utilizando IA.
-- Responder perguntas relacionadas a empréstimos.
+- Simular valores de empréstimos com base no valor, taxa de juros e número de parcelas
+- Gerar resumos explicativos sobre empréstimos utilizando IA
+- Responder perguntas relacionadas a empréstimos
 
-##Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```
 simulador_credito/
@@ -19,89 +19,105 @@ simulador_credito/
 │   ├── main.py
 │   ├── models.py
 │   ├── openai_utils.py
-│   ├── schemas.py
+│   └── schemas.py
 ├── screenshots/
 │   └── simulador_credito.png
-├── venv/ (diretório virtual do Python)
-├── .env (arquivo de variáveis de ambiente)
+├── venv/
+├── .env
 ├── .gitignore
-├── requirements.txt
+└── requirements.txt
 ```
 
-##Instalação
+## 🛠️ Instalação
 
 1. Clone o repositório:
-```
+```bash
 git clone <url-do-repositorio>
 cd simulador_credito
 ```
 
 2. Crie e ative um ambiente virtual:
-```
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
+```bash
+# Criar ambiente virtual
+python -m venv venv 
+
+# Ativar ambiente virtual
+# Linux/Mac:
+source venv/bin/activate
+# Windows:
+venv\Scripts\activate
 ```
 
 3. Instale as dependências:
-```
+```bash
 pip install -r requirements.txt
 ```
 
-4. Configure as variáveis de ambiente no arquivo .env:
-```
+4. Configure as variáveis de ambiente no arquivo `.env`:
+```env
 DATABASE_URL=postgresql://<usuario>:<senha>@<host>/<banco>
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 5. Execute o projeto:
-```
+```bash
 uvicorn app.main:app --reload
 ```
 
 6. Acesse a documentação interativa da API em: http://127.0.0.1:8000/docs
 
-##Screenshot
+## 📸 Screenshot
 
 Abaixo, uma visualização da estrutura do projeto:
 
 ![Estrutura do Projeto](screenshots/simulador_credito.png)
 
-##Endpoints
+## 🔌 Endpoints
 
-###1. Simular Empréstimo
-**POST** `/simular-emprestimo`  
-Calcula os valores de um empréstimo com base no valor, taxa de juros mensal e número de parcelas.  
-- **Parâmetros**:  
-  - `valor_emprestimo`: float - Valor do empréstimo (exemplo: 100000).  
-  - `taxa_juros`: float - Taxa de juros mensal em % (exemplo: 1.5).  
-  - `num_parcelas`: int - Número de parcelas (exemplo: 36).  
+### Simular Empréstimo
 
-###2. Listar Simulações
-**GET** `/simulacoes`  
-Retorna todas as simulações registradas no banco de dados.  
+**POST** `/simular-emprestimo`
 
-###3. Gerar Resumo
-**POST** `/gerar-resumo`  
-Gera um resumo explicativo sobre o empréstimo utilizando IA.  
-- **Parâmetros**:  
-  - `valor_emprestimo`: float - Valor do empréstimo (exemplo: 100000).  
-  - `taxa_juros`: float - Taxa de juros mensal em % (exemplo: 1.5).  
-  - `num_parcelas`: int - Número de parcelas (exemplo: 36).  
+Calcula os valores de um empréstimo com base nos parâmetros fornecidos.
 
-###4. Responder Pergunta
-**POST** `/pergunta-emprestimo`  
-Responde perguntas relacionadas a empréstimos utilizando IA.  
-- **Parâmetros**:  
-  - `pergunta`: string - Pergunta sobre empréstimos (exemplo: "Como funciona a taxa de juros?").  
+**Parâmetros**:
+- `valor_emprestimo`: float - Valor do empréstimo (ex: 100000)
+- `taxa_juros`: float - Taxa de juros mensal em % (ex: 1.5)
+- `num_parcelas`: int - Número de parcelas (ex: 36)
 
-##Tecnologias Utilizadas
+### Listar Simulações
 
-- **FastAPI**: Framework para desenvolvimento de APIs.  
-- **SQLAlchemy**: ORM para interagir com o banco de dados.  
-- **PostgreSQL**: Banco de dados utilizado.  
-- **OpenAI API**: Para gerar resumos e responder perguntas.  
+**GET** `/simulacoes`
 
-##Licença
+Retorna todas as simulações registradas no banco de dados.
+
+### Gerar Resumo
+
+**POST** `/gerar-resumo`
+
+Gera um resumo explicativo sobre o empréstimo utilizando IA.
+
+**Parâmetros**:
+- `valor_emprestimo`: float - Valor do empréstimo (ex: 100000)
+- `taxa_juros`: float - Taxa de juros mensal em % (ex: 1.5)
+- `num_parcelas`: int - Número de parcelas (ex: 36)
+
+### Responder Pergunta
+
+**POST** `/pergunta-emprestimo`
+
+Responde perguntas relacionadas a empréstimos utilizando IA.
+
+**Parâmetros**:
+- `pergunta`: string - Pergunta sobre empréstimos (ex: "Como funciona a taxa de juros?")
+
+## 🛠️ Tecnologias Utilizadas
+
+- **FastAPI**: Framework para desenvolvimento de APIs
+- **SQLAlchemy**: ORM para interagir com o banco de dados
+- **PostgreSQL**: Banco de dados relacional
+- **OpenAI API**: Para gerar resumos e responder perguntas
+
+## 📝 Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
