@@ -1,14 +1,14 @@
-# Simulador de Empréstimos 🏦
+# Simulador de Empréstimos
 
 Uma API desenvolvida com FastAPI para simular empréstimos e utilizar IA para fornecer explicações e responder perguntas sobre empréstimos.
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - Simular valores de empréstimos com base no valor, taxa de juros e número de parcelas
 - Gerar resumos explicativos sobre empréstimos utilizando IA
 - Responder perguntas relacionadas a empréstimos
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 simulador_credito/
@@ -28,7 +28,7 @@ simulador_credito/
 └── requirements.txt
 ```
 
-## 🛠️ Instalação
+## Instalação
 
 1. Clone o repositório:
 ```bash
@@ -38,10 +38,8 @@ cd simulador_credito
 
 2. Crie e ative um ambiente virtual:
 ```bash
-# Criar ambiente virtual
-python -m venv venv 
+python -m venv venv
 
-# Ativar ambiente virtual
 # Linux/Mac:
 source venv/bin/activate
 # Windows:
@@ -54,7 +52,7 @@ pip install -r requirements.txt
 ```
 
 4. Configure as variáveis de ambiente no arquivo `.env`:
-```env
+```
 DATABASE_URL=postgresql://<usuario>:<senha>@<host>/<banco>
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
@@ -66,13 +64,13 @@ uvicorn app.main:app --reload
 
 6. Acesse a documentação interativa da API em: http://127.0.0.1:8000/docs
 
-## 📸 Screenshot
+## Screenshot
 
 Abaixo, uma visualização da estrutura do projeto:
 
 ![Estrutura do Projeto](screenshots/simulador_credito.png)
 
-## 🔌 Endpoints
+## Endpoints
 
 ### Simular Empréstimo
 
@@ -111,13 +109,13 @@ Responde perguntas relacionadas a empréstimos utilizando IA.
 **Parâmetros**:
 - `pergunta`: string - Pergunta sobre empréstimos (ex: "Como funciona a taxa de juros?")
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **FastAPI**: Framework para desenvolvimento de APIs
 - **SQLAlchemy**: ORM para interagir com o banco de dados
 - **PostgreSQL**: Banco de dados relacional
 - **OpenAI API**: Para gerar resumos e responder perguntas
 
-## 📝 Licença
+## Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
