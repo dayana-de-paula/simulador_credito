@@ -37,28 +37,27 @@ simulador_credito/
    ```
 
 2. Crie e ative um ambiente virtual:
-
-```
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-```
+   ```
+   python -m venv venv
+   source venv/bin/activate  # Linux/Mac
+   venv\Scripts\activate     # Windows
+   ```
 
 3. Instale as dependências:
-```
-pip install -r requirements.txt
-```
+   ```
+   pip install -r requirements.txt
+   ```
 
 4. Configure as variáveis de ambiente no arquivo .env:
-```
-DATABASE_URL=postgresql://<usuario>:<senha>@<host>/<banco>
-OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-```
+   ```
+   DATABASE_URL=postgresql://<usuario>:<senha>@<host>/<banco>
+   OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+   ```
 
 5. Execute o projeto:
-```
-uvicorn app.main:app --reload
-```
+   ```
+   uvicorn app.main:app --reload
+   ```
 
 6. Acesse a documentação interativa da API em: http://127.0.0.1:8000/docs
 
