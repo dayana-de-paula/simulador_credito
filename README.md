@@ -26,6 +26,7 @@ simulador_credito/
 ├── .env (arquivo de variáveis de ambiente)
 ├── .gitignore
 ├── requirements.txt
+```
 
 ## Instalação
 
