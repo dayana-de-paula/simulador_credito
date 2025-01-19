@@ -32,7 +32,7 @@ simulador_credito/
 
 1. Clone o repositório:
    ```bash
-   git clone <url-do-repositorio>
+   git clone https://github.com/dayana-de-paula/simulador_credito/
    cd simulador_credito
    ```
 
